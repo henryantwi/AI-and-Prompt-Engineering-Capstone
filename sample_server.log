@@ -1,0 +1,26 @@
+2026-02-10 14:00:01,101 INFO Server started successfully
+2026-02-10 14:00:05,220 INFO Health check passed
+2026-02-10 14:00:08,331 WARNING High memory usage detected
+2026-02-10 14:00:10,442 INFO User authentication succeeded
+2026-02-10 14:00:12,553 ERROR Database connection failed
+2026-02-10 14:00:13,664 ERROR Database connection failed
+2026-02-10 14:00:14,775 ERROR Database connection failed
+2026-02-10 14:00:15,886 CRITICAL Disk write failure
+2026-02-10 14:01:01,101 INFO Scheduled job started
+2026-02-10 14:01:02,202 INFO Scheduled job completed
+2026-02-10 14:01:05,303 WARNING API response latency high
+2026-02-10 14:01:07,404 INFO Cache refreshed
+2026-02-10 14:01:10,505 ERROR Timeout while calling payment service
+2026-02-10 14:01:11,606 ERROR Timeout while calling payment service
+2026-02-10 14:01:12,707 ERROR Timeout while calling payment service
+2026-02-10 14:01:13,808 ERROR Timeout while calling payment service
+2026-02-10 14:01:14,909 ERROR Timeout while calling payment service
+2026-02-10 14:02:01,111 INFO User logout successful
+2026-02-10 14:02:05,222 INFO Session cleanup completed
+2026-02-10 14:02:07,333 WARNING CPU usage spike detected
+2026-02-10 14:02:10,444 ERROR Failed to write audit log
+2026-02-10 14:02:11,555 ERROR Failed to write audit log
+2026-02-10 14:02:12,666 ERROR Failed to write audit log
+2026-02-10 14:02:13,777 ERROR Failed to write audit log
+2026-02-10 14:02:14,888 ERROR Failed to write audit log
+2026-02-10 14:02:15,999 CRITICAL Out of memory error

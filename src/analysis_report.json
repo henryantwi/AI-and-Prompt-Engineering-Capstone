@@ -1,0 +1,58 @@
+{
+    "file_analyzed": "./src/sample_server.log",
+    "total_lines": 26,
+    "parsed_lines": 26,
+    "log_level_counts": {
+        "INFO": 8,
+        "WARNING": 3,
+        "ERROR": 13,
+        "CRITICAL": 2
+    },
+    "severity_summary": {
+        "Low": {
+            "levels": [
+                "INFO"
+            ],
+            "count": 8,
+            "percentage": 30.77
+        },
+        "Medium": {
+            "levels": [
+                "WARNING"
+            ],
+            "count": 3,
+            "percentage": 11.54
+        },
+        "High": {
+            "levels": [
+                "ERROR",
+                "CRITICAL"
+            ],
+            "count": 15,
+            "percentage": 57.69
+        }
+    },
+    "top_5_error_messages": [
+        [
+            "Timeout while calling payment service",
+            5
+        ],
+        [
+            "Failed to write audit log",
+            5
+        ],
+        [
+            "Database connection failed",
+            3
+        ],
+        [
+            "Disk write failure",
+            1
+        ],
+        [
+            "Out of memory error",
+            1
+        ]
+    ],
+    "error_rate_anomalies": []
+}
