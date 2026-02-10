@@ -1,4 +1,4 @@
-# 📊 Smart Log Analyzer
+# Smart Log Analyzer
 
 A production-ready Python tool that automatically parses server logs, detects anomalies, and generates actionable reports.
 
@@ -6,7 +6,7 @@ A production-ready Python tool that automatically parses server logs, detects an
 
 ---
 
-## ✨ Features
+## Features
 
 - **Log Parsing** — Extracts timestamp, level, and message from structured log files using regex
 - **Level Counting** — Tallies INFO, WARNING, ERROR, and CRITICAL entries
@@ -18,7 +18,7 @@ A production-ready Python tool that automatically parses server logs, detects an
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.7+
@@ -73,7 +73,7 @@ Anomalous Error Periods:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 capstone/
@@ -92,7 +92,7 @@ capstone/
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 To analyze a different log file, update the `main()` function in `log_analyzer.py`:
 
@@ -114,7 +114,7 @@ Example:
 
 ---
 
-## 🧠 AI Workflow
+## AI Workflow
 
 This project was built using a **multi-stage AI workflow**:
 
@@ -125,7 +125,7 @@ This project was built using a **multi-stage AI workflow**:
 
 ---
 
-## 👤 Author
+## Author
 
 **Henry Nana Antwi**
 Applied AI & Prompt Engineering — 2026
