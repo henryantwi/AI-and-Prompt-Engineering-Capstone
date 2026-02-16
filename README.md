@@ -2,8 +2,6 @@
 
 A Python script that parses server logs to find errors, count log levels, and detect simple anomalies.
 
-> **Note:** This is my Capstone Project for the Applied AI & Prompt Engineering course.
-
 ---
 
 ## What It Does
