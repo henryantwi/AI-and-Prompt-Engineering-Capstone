@@ -96,10 +96,3 @@ I used a multi-stage AI workflow to build this:
 
 1.  **ChatGPT:** gave me the initial script and the sample Log file.
 2.  **VS Code Copilot:** helped me refine the code, specifically adding the "Severity Summary" feature and setting up the file logging.
-
----
-
-## Author
-
-**Henry Nana Antwi**
-Applied AI & Prompt Engineering — 2026
