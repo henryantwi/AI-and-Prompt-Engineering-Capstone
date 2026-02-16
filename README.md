@@ -1,47 +1,57 @@
 # Smart Log Analyzer
 
-A production-ready Python tool that automatically parses server logs, detects anomalies, and generates actionable reports.
+A Python script that parses server logs to find errors, count log levels, and detect simple anomalies.
 
-> **Built as a Capstone Project** for the Applied AI & Prompt Engineering course — demonstrating a multi-stage AI workflow (Chat AI → IDE AI).
+> **Note:** This is my Capstone Project for the Applied AI & Prompt Engineering course.
 
 ---
 
-## Features
+## What It Does
 
-- **Log Parsing** — Extracts timestamp, level, and message from structured log files using regex
-- **Level Counting** — Tallies INFO, WARNING, ERROR, and CRITICAL entries
-- **Severity Summary** — Categorizes entries into Low / Medium / High with percentage breakdowns
-- **Top Errors** — Identifies the 5 most frequent error messages
-- **Anomaly Detection** — Flags time periods with unusually high error rates (mean + 2σ)
-- **JSON Reports** — Exports machine-readable analysis to `analysis_report.json`
-- **Audit Logging** — Logs its own activity to `logs/analyzer.log`
+This tool reads a standard server log file and breaks down what happened. It helps you answer questions like:
+- "How many errors did we have today?"
+- "What are the most common error messages?"
+- "Did the error rate spike at any specific time?"
+
+Specifically, it features:
+- **Log Parsing:** Extracts the date, time, log level (INFO, ERROR, etc.), and message.
+- **Severity Groups:** Groups logs into Low (INFO), Medium (WARNING), and High (ERROR/CRITICAL).
+- **Anomaly Detection:** Flags minutes where the error count was unusually high (using a simple statistical threshold).
+- **Reporting:** Saves all the data to a JSON file (`analysis_report.json`) and prints a summary to the console.
 
 ---
 
 ## Quick Start
 
-### Prerequisites
-- Python 3.7+
+### Setup
 
-### Installation
-```bash
-# Clone the repo
-git clone <repo-url>
-cd capstone
+You need Python 3.7 or newer.
 
-# (Optional) Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # or .venv\Scripts\activate on Windows
-```
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/henryantwi/AI-and-Prompt-Engineering-Capstone.git
+   cd capstone
+   ```
 
-### Usage
+2. **(Optional) Use a virtual environment:**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Windows: .venv\Scripts\activate
+   ```
+
+### how to Run
+
+Run the script directly:
 ```bash
 python log_analyzer.py
 ```
 
-By default, the script reads `sample_server.log` and outputs to `analysis_report.json`.
+By default, it looks for `sample_server.log` in the same folder.
 
 ### Example Output
+
+When you run it, you'll see a summary like this:
+
 ```
 ====== LOG ANALYSIS SUMMARY ======
 File analyzed: sample_server.log
@@ -75,53 +85,19 @@ Anomalous Error Periods:
 
 ## Project Structure
 
-```
-capstone/
-├── log_analyzer.py          # Main script (~290 lines)
-├── sample_server.log        # Sample input data
-├── analysis_report.json     # Generated JSON report
-├── logs/
-│   └── analyzer.log         # Analyzer's own activity log
-├── screenshots/             # Proof of execution
-│   ├── image-1.png
-│   ├── image-2.png
-│   └── summary-output.png
-├── pyproject.toml
-└── README.md
-```
+- `log_analyzer.py`: The main Python script (approx. 290 lines).
+- `sample_server.log`: A dummy log file I created to test the script.
+- `analysis_report.json`: The output file with all the stats.
+- `logs/`: Folder where the script saves its own internal logs.
 
 ---
 
-## Configuration
+## How It Was Built
 
-To analyze a different log file, update the `main()` function in `log_analyzer.py`:
+I used a multi-stage AI workflow to build this:
 
-```python
-def main() -> None:
-    input_log = "your_custom_file.log"      # ← Change this
-    output_report = "your_report.json"       # ← Change this
-```
-
-### Expected Log Format
-```
-YYYY-MM-DD HH:MM:SS,mmm LEVEL Message text here
-```
-
-Example:
-```
-2026-02-10 14:00:12,553 ERROR Database connection failed
-```
-
----
-
-## AI Workflow
-
-This project was built using a **multi-stage AI workflow**:
-
-| Step | Tool | UX Type | Task |
-|------|------|---------|------|
-| 1 | ChatGPT | Chat | Generated the base script + sample data |
-| 2 | VS Code Copilot | IDE | Added severity summary + file-based logging |
+1.  **ChatGPT:** gave me the initial script and the sample Log file.
+2.  **VS Code Copilot:** helped me refine the code, specifically adding the "Severity Summary" feature and setting up the file logging.
 
 ---
 
