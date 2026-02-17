@@ -92,7 +92,8 @@ Anomalous Error Periods:
 
 ## How It Was Built
 
-I used a multi-stage AI workflow to build this:
+I used a three-stage AI workflow to build and utilize this tool:
 
-1.  **ChatGPT:** gave me the initial script and the sample Log file.
-2.  **VS Code Copilot:** helped me refine the code, specifically adding the "Severity Summary" feature and setting up the file logging.
+1.  **ChatGPT (Chat UI):** Generated the initial script logic and the `sample_server.log` file.
+2.  **VS Code Copilot (IDE UI):** Refined the code, specifically adding the "Severity Summary" feature and setting up advanced file logging.
+3.  **Cursor CLI (CLI UI):** Used to interpret the final `analysis_report.json` and generate an executive summary for management.
