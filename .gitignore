@@ -9,4 +9,5 @@ wheels/
 # Virtual environments
 .venv
 .env
-# capstone.md
+capstone.md
+CAPSTONE_SUBMISSION.md
